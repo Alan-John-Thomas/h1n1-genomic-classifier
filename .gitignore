@@ -1,0 +1,33 @@
+﻿# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.class
+.pytest_cache/
+
+# Virtual Environment
+venv/
+env/
+.env
+
+# Notes 
+notes/
+
+# Large Datasets and Caches
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Checkpoints and Model Weights
+checkpoints/*
+!checkpoints/.gitkeep
+
+# Logs and Tensorboard
+logs/*
+!logs/.gitkeep
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
