@@ -15,8 +15,7 @@ notes/
 # Large Datasets and Caches
 data/raw/*
 !data/raw/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
+
 
 # Checkpoints and Model Weights
 checkpoints/*
