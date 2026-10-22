@@ -1,9 +1,10 @@
 # Core Deep Learning & Foundations
 torch>=2.1.0
 torchvision>=0.16.0
-transformers>=4.38.0
+transformers>=4.38.0,<4.39.0
 tokenizers>=0.15.0
 accelerate>=0.27.0
+rna-fm>=0.2.0
 
 # Bioinformatics
 biopython>=1.83
