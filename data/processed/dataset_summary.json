@@ -1,0 +1,15 @@
+{
+  "total_samples": 2250,
+  "train_samples": 1575,
+  "val_samples": 337,
+  "test_samples": 338,
+  "classes": {
+    "Human": 0,
+    "Swine": 1,
+    "Avian": 2
+  },
+  "mean_length": 1725.0391111111112,
+  "min_length": 1601,
+  "max_length": 1790,
+  "seed": 42
+}
