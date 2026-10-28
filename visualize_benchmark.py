@@ -5,6 +5,7 @@ for the MCA Semester 3 Mini Project presentation and final report.
 """
 
 import os
+import argparse
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
@@ -39,7 +40,7 @@ PER_CLASS_F1 = {
 }
 
 
-def plot_overall_comparison(save_path):
+def plot_overall_comparison(save_path, show=False):
     metrics = OVERALL_METRICS["Metric"]
     dna_scores = OVERALL_METRICS["DNABERT-2"]
     rna_scores = OVERALL_METRICS["RNA-FM"]
@@ -71,11 +72,13 @@ def plot_overall_comparison(save_path):
 
     plt.tight_layout()
     plt.savefig(save_path, dpi=300)
-    plt.close()
     print(f"[Plot] Saved overall comparison chart to: {save_path}")
+    if show:
+        plt.show()
+    plt.close()
 
 
-def plot_per_class_comparison(save_path):
+def plot_per_class_comparison(save_path, show=False):
     hosts = PER_CLASS_F1["Host"]
     dna_scores = PER_CLASS_F1["DNABERT-2"]
     rna_scores = PER_CLASS_F1["RNA-FM"]
@@ -108,11 +111,17 @@ def plot_per_class_comparison(save_path):
 
     plt.tight_layout()
     plt.savefig(save_path, dpi=300)
-    plt.close()
     print(f"[Plot] Saved per-class comparison chart to: {save_path}")
+    if show:
+        plt.show()
+    plt.close()
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Generate benchmark visualization charts.")
+    parser.add_argument("--show", action="store_true", help="Display the plots in interactive GUI windows.")
+    args = parser.parse_args()
+
     print("=" * 65)
     print("Generating Benchmark Visualizations for Project Report...")
     print("=" * 65)
@@ -120,8 +129,8 @@ def main():
     p1 = os.path.join(LOGS_DIR, "benchmark_comparison.png")
     p2 = os.path.join(LOGS_DIR, "per_class_comparison.png")
 
-    plot_overall_comparison(p1)
-    plot_per_class_comparison(p2)
+    plot_overall_comparison(p1, show=args.show)
+    plot_per_class_comparison(p2, show=args.show)
 
     print("\nVisualizations successfully generated in 'logs/' folder!")
     print("=" * 65)
