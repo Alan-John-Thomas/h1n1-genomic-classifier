@@ -41,3 +41,7 @@ h1n1-env/
 # Python cache
 __pycache__/
 *.py[cod]
+# PowerPoint files
+*.pptx
+~$*
+
