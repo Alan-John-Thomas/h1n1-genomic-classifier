@@ -1,4 +1,4 @@
-﻿# Byte-compiled / cache
+# Byte-compiled / cache
 __pycache__/
 *.py[cod]
 *.class
@@ -41,7 +41,8 @@ h1n1-env/
 # Python cache
 __pycache__/
 *.py[cod]
-# PowerPoint files
-*.pptx
+# PowerPoint temp files
 ~$*
+# Track the presentation file
+!H1N1_Genomic_Classifier_Presentation.pptx
 
